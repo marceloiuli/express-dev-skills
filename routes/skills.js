@@ -4,9 +4,17 @@ var skillsCtrl = require('../controller/skills')
 
 /* GET users listing. */
 router.get('/', skillsCtrl.index);
-router.get('/:id', skillsCtrl.show);
+
 router.get('/new', skillsCtrl.new);
-router.get('/:id/edit', skillsCtrl.edit);
+
+router.get('/:id', skillsCtrl.show);
+
 router.post('/', skillsCtrl.create)
+
+router.get('/:id/edit', skillsCtrl.edit);
+
+router.put('/:id', skillsCtrl.update);
+
+router.delete('/:id', skillsCtrl.delete);
 
 module.exports = router;
